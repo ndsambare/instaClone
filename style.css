@@ -1,0 +1,443 @@
+html, body {
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.headerBar {
+  /* border: 1px solid blue; */
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+ align-items: stretch;
+ width: 100%;
+}
+
+.headerBar .searchBar {
+
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: fixed;
+  top: 5%;
+  left: 40%;
+}
+
+.headerBar .vertBar {
+color: black;
+  font-size: 1.7em;
+  position: fixed;
+  top: 3%;
+  left: 8%;
+}
+
+.headerBar .InstaHeader {
+  height: 100%;
+}
+
+
+.headerBar .rightSideIcons {
+ font-size: 1.3em;
+  position: fixed;
+  top: 6%;
+  right: 15%;
+}
+
+input:hover, input:focus {
+ background-color: #FEFF7F;
+ border: 1px solid #FF0000;
+ color:#000000;
+}
+
+input:before {
+  background-color: gray;
+}
+
+.entirePage {
+  margin-top: 150px;
+  height: 100%;
+  border: 1px solid red;
+  background-color: red;
+
+  display: grid;
+  grid-template-columns: [sideBaby] 20% [postPage] 40%  [sideBar] 20% [secondSideBaby] 20%;
+
+  background-color: #fafafa;
+}
+
+.picturePost {
+
+  display: flex;
+  flex-direction: column;
+  height: 950px;
+  width: 640px;
+  border: 1px solid red;
+
+}
+
+.postPage{
+  grid-column-start: postPage;
+  background-color: gray;
+}
+
+#compassIcon {
+  padding: 10px;
+}
+#heartIcon {
+  padding: 10px;
+}
+#userIcon {
+  padding: 10px;
+}
+
+.pictureHeader {
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: [profilePic] 8% [profName] 20% [col3] 1fr;
+}
+.actualImage {
+
+  width: 100%;
+  height: 780px;
+  border: solid 1px red;
+}
+
+
+.postProfile {
+  grid-column-start: profName;
+  font-weight: bold;
+}
+
+.pictureHeader img{
+  border: 2px solid pink;
+  border-radius: 50%;
+  height: 100%;
+  grid-column-start: profilePic;
+}
+
+.dotdotdot {
+  margin: 15px;
+  grid-column-start: col3;
+  justify-self: end;
+}
+
+.picBottom {
+  background-color: white;
+display: grid;
+grid-template-columns: [like] 10% [comment] 10% [send] 10% [bookmark] 50%;
+height: 40px;
+width: 100%;
+border: 1px solid green;
+
+
+}
+
+#likeIcon {
+  grid-column-start: like;
+  height: 100%;
+
+}
+
+ #commentIcon {
+
+  grid-column-start: comment;
+  height: 100%;
+
+
+}
+
+#sendIcon {
+
+  grid-column-start: send;
+  height: 100%;
+
+}
+
+#bookmarkIcon {
+  justify-self: end;
+
+  grid-column-start: bookmark;
+  height: 100%;
+
+}
+
+.likesComments {
+  display: grid;
+  grid-template-rows: [row1] 10% [row2] 10% [row3] 10% [row4] 1fr;
+  grid-template-columns: [col1] 1fr;
+
+}
+
+.likes {
+  grid-row-start: row1;
+  height: 100%;
+}
+
+.caption {
+  grid-row-start: row2;
+  height: 100%;
+}
+
+.time {
+  grid-row-start: row3;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.addComment {
+  display: flex;
+  grid-row-start: row4;
+  height: 100%;
+  width: 640px;
+  flex-direction: row;
+
+}
+
+.button {
+  grid-column-start: col1;
+
+
+  margin: 10px;
+align-self: flex-end;
+}
+
+#compassIcon {
+  padding: 10px;
+}
+#heartIcon {
+  padding: 10px;
+}
+#userIcon {
+  padding: 10px;
+}
+
+.picturePostTwo {
+  padding-top: 150px; 
+  display: flex;
+  flex-direction: column;
+  height: 950px;
+  width: 640px;
+  border: 1px solid red;
+}
+
+.pictureHeaderTwo {
+
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: [profilePic] 8% [profName] 20% [col3] 1fr;
+}
+.actualImageTwo {
+
+  width: 100%;
+  height: 780px;
+  border: solid 1px red;
+}
+
+
+.postProfileTwo {
+  grid-column-start: profName;
+  font-weight: bold;
+}
+
+.pictureHeaderTwo img{
+  border: 2px solid pink;
+  border-radius: 50%;
+  height: 100%;
+  grid-column-start: profilePic;
+}
+
+.dotdotdotTwo {
+  margin: 15px;
+  grid-column-start: col3;
+  justify-self: end;
+}
+
+.picBottomTwo {
+  background-color: white;
+display: grid;
+grid-template-columns: [like] 10% [comment] 10% [send] 10% [bookmark] 50%;
+height: 40px;
+width: 100%;
+border: 1px solid green;
+
+}
+
+#likeIconTwo {
+  grid-column-start: like;
+  height: 100%;
+
+}
+
+ #commentIconTwo {
+
+  grid-column-start: comment;
+  height: 100%;
+
+
+}
+
+#sendIconTwo {
+
+  grid-column-start: send;
+  height: 100%;
+
+}
+
+#bookmarkIconTwo {
+  justify-self: end;
+
+  grid-column-start: bookmark;
+  height: 100%;
+
+}
+
+.likesCommentsTwo {
+  display: grid;
+  grid-template-rows: [row1] 10% [row2] 10% [row3] 10% [row4] 1fr;
+  grid-template-columns: [col1] 1fr;
+}
+
+.likesTwo {
+  grid-row-start: row1;
+  height: 100%;
+}
+
+.captionTwo {
+  grid-row-start: row2;
+  height: 100%;
+}
+
+.timeTwo {
+  grid-row-start: row3;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.addCommentTwo {
+  display: flex;
+  flex-direction: row;
+  grid-row-start: row4;
+  height: 100%;
+
+}
+
+.buttonTwo {
+  grid-column-start: col1;
+
+  align-self: end;
+  margin: 10px;
+
+}
+
+
+
+
+
+
+
+
+.sideBar{
+  display: grid;
+  grid-template-rows: [row1] 10% [row2] 20% [row3] 20%;
+  grid-column-start: sideBar;
+  background-color: #fafafa;
+  border: 1px solid black;
+}
+
+
+.profileBar {
+
+
+display: grid;
+grid-row-start: row1;
+
+grid-template-columns: [col1] 25% [col2] 1fr;
+height: 100%;
+border: 1px solid red;
+}
+
+
+
+.profileSidePic {
+  border: 1px solid red;
+  height: 100%;
+  grid-column-start: col1;
+
+
+}
+.profileSidePic img {
+  border-radius: 50%;
+}
+.stories {
+
+  grid-row-start: row2;
+
+  height: 100%;
+  border: 1px solid green;
+
+
+
+}
+
+.storyBar {
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+
+ width: 100%;
+ height: 20%;
+ border: 1px solid yellow;
+}
+.storyLabels {
+  margin: 8px;
+}
+
+.storyLab {
+  margin: 8px;
+}
+
+.actualStories {
+  overflow-y: scroll;
+}
+
+.suggestions {
+  grid-row-start: row3;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.suggestionsBar {
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+
+ width: 100%;
+ height: 20%;
+ border: 1px solid yellow;
+}
+.suggestionsContent {
+  overflow-y: scroll;
+}
+.suggestionLabels {
+  margin: 8px;
+}
+
+.suggestionLab {
+  margin: 8px;
+}
+
+.userName {
+  grid-column-start: col2;
+  padding: 5px;
+  justify-self: start;
+  padding: 10px;
+}
