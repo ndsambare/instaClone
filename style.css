@@ -1,3 +1,6 @@
+* {
+  font-family: "proxima-nova"
+}
 html, body {
   height: 100%;
   background-color: #fafafa;
@@ -10,78 +13,194 @@ html, body {
   top: 0px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
- align-items: stretch;
+  justify-content:flex-start;
+
  width: 100%;
+ height: 10%;
+ border: 1px solid #dbdbdb;
 }
 
-.headerBar .searchBar {
+.searchBarContainer {
 
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  position: fixed;
-  top: 5%;
-  left: 40%;
-}
 
-.headerBar .vertBar {
-color: black;
-  font-size: 1.7em;
-  position: fixed;
-  top: 3%;
-  left: 8%;
-}
-
-.headerBar .InstaHeader {
+  display: flex;
+ flex-direction: row;
+  justify-content: center;
   height: 100%;
+  width: 33%;
+
+  position: relative;
+}
+
+.searchBarContainer img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 7%;
+    padding-left: 40%;
+}
+
+.searchBar {
+  padding-top:5%;
+  font: inherit;
+
 }
 
 
-.headerBar .rightSideIcons {
- font-size: 1.3em;
-  position: fixed;
-  top: 6%;
-  right: 15%;
+
+.InstaHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100%;
+
+  width: 33%;
+}
+.instaIcon {
+  padding-top: 5%;
+
+  margin-left: 50%;
 }
 
-input:hover, input:focus {
+.instaPic {
+  padding-top: 5%;
+
+  margin-left: 2%;
+
+}
+div.vertical-line{
+  padding-top: 3%;
+  margin-top: 5%;
+      width: 1px;
+      background-color: black;
+      height: 30%;
+      float: left;
+      transition: opacity .1s ease-out;
+    }
+
+
+
+
+
+.rightSideIcons {
+  display: flex;
+  flex-direction: row;
+  width: 33%;
+  height: 100%;
+
+ justify-content: flex-start;
+
+}
+
+.DMIcon {
+margin-top: 5%;
+  padding-right: 25px;
+}
+
+.compIcon {
+  margin-top: 5%;
+  padding-right: 25px;
+}
+
+.heartIcon {
+  margin-top: 5%;
+  padding-right: 25px;
+}
+.profilePicture {
+  margin-top: 5%;
+  border-radius: 50%;
+  transform: rotate(90deg);
+
+}
+
+input {
+  height: 30px;
+   width: 200px;
+    background-color: #fafafa;
+}
+ input:focus {
  background-color: #FEFF7F;
  border: 1px solid #FF0000;
  color:#000000;
 }
 
-input:before {
-  background-color: gray;
-}
+
 
 .entirePage {
-  margin-top: 150px;
+  overflow-y: scroll;
+  margin-top: 100px;
   height: 100%;
-  border: 1px solid red;
+
   background-color: red;
 
   display: grid;
   grid-template-columns: [sideBaby] 20% [postPage] 40%  [sideBar] 20% [secondSideBaby] 20%;
-
+ column-gap: 100px;
   background-color: #fafafa;
-}
-
-.picturePost {
-
-  display: flex;
-  flex-direction: column;
-  height: 950px;
-  width: 640px;
-  border: 1px solid red;
-
 }
 
 .postPage{
   grid-column-start: postPage;
-  background-color: gray;
+  background-color:#fafafa;
 }
+
+
+.picturePost {
+  display: flex;
+  flex-direction: column;
+  height: 950px;
+  width: 640px;
+  border: 1px solid #dbdbdb;
+
+}
+
+.pictureHeader {
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+}
+
+.postProfile {
+height: 100%;
+font-weight: bold;
+
+padding-top: 6%;
+  /* grid-column-start: profName; */
+}
+
+.profile {
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+}
+
+
+.actualImage {
+  width: 640px;
+  height: 640px;
+}
+
+.pictureHeader img{
+  border: 2px solid pink;
+  border-radius: 50%;
+  margin: 1px;
+}
+
+.dotdotdot {
+  margin: 15px;
+  padding-right: 10px;
+  grid-column-start: col3;
+  justify-self: end;
+}
+
+
 
 #compassIcon {
   padding: 10px;
@@ -93,61 +212,34 @@ input:before {
   padding: 10px;
 }
 
-.pictureHeader {
-  background-color: white;
-  height: 60px;
-  width: 100%;
-  border: 2px solid black;
-  display: grid;
-  grid-template-columns: [profilePic] 8% [profName] 20% [col3] 1fr;
-}
-.actualImage {
-
-  width: 100%;
-  height: 780px;
-  border: solid 1px red;
-}
 
 
-.postProfile {
-  grid-column-start: profName;
-  font-weight: bold;
-}
 
-.pictureHeader img{
-  border: 2px solid pink;
-  border-radius: 50%;
-  height: 100%;
-  grid-column-start: profilePic;
-}
 
-.dotdotdot {
-  margin: 15px;
-  grid-column-start: col3;
-  justify-self: end;
-}
+
+
 
 .picBottom {
   background-color: white;
 display: grid;
-grid-template-columns: [like] 10% [comment] 10% [send] 10% [bookmark] 50%;
+grid-template-columns: [like] 10% [comment] 10% [send] 10% [bookmark] 1fr;
 height: 40px;
 width: 100%;
-border: 1px solid green;
+
 
 
 }
 
 #likeIcon {
   grid-column-start: like;
-  height: 100%;
+  height: 70%;
 
 }
 
  #commentIcon {
 
   grid-column-start: comment;
-  height: 100%;
+  height: 70%;
 
 
 }
@@ -155,19 +247,21 @@ border: 1px solid green;
 #sendIcon {
 
   grid-column-start: send;
-  height: 100%;
+  height: 70%;
 
 }
 
 #bookmarkIcon {
+  padding-right: 20px;
   justify-self: end;
 
   grid-column-start: bookmark;
-  height: 100%;
+  height: 70%;
 
 }
 
 .likesComments {
+  background-color: white;
   display: grid;
   grid-template-rows: [row1] 10% [row2] 10% [row3] 10% [row4] 1fr;
   grid-template-columns: [col1] 1fr;
@@ -175,6 +269,7 @@ border: 1px solid green;
 }
 
 .likes {
+  margin-top: 5px;
   grid-row-start: row1;
   height: 100%;
 }
@@ -186,7 +281,7 @@ border: 1px solid green;
 
 .time {
   grid-row-start: row3;
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: bold;
 }
 
@@ -196,15 +291,16 @@ border: 1px solid green;
   height: 100%;
   width: 640px;
   flex-direction: row;
+  justify-content: space-between;
 
 }
 
 .button {
   grid-column-start: col1;
-
-
+  color: #3897f0;
+  font-weight: 600;
+  align-self: end;
   margin: 10px;
-align-self: flex-end;
 }
 
 #compassIcon {
@@ -218,28 +314,48 @@ align-self: flex-end;
 }
 
 .picturePostTwo {
-  padding-top: 150px; 
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   height: 950px;
   width: 640px;
-  border: 1px solid red;
+    border: 1px solid #dbdbdb;
+
 }
 
 .pictureHeaderTwo {
-
   background-color: white;
   height: 60px;
   width: 100%;
-  border: 2px solid black;
-  display: grid;
-  grid-template-columns: [profilePic] 8% [profName] 20% [col3] 1fr;
+  border: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
 }
+
+.postProfileTwo {
+height: 100%;
+font-weight: bold;
+
+padding-top: 6%;
+  /* grid-column-start: profName; */
+}
+
+.profileTwo {
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+}
+
+
 .actualImageTwo {
 
-  width: 100%;
-  height: 780px;
-  border: solid 1px red;
+  width: 640px;
+  height: 640px;
+
 }
 
 
@@ -251,12 +367,13 @@ align-self: flex-end;
 .pictureHeaderTwo img{
   border: 2px solid pink;
   border-radius: 50%;
-  height: 100%;
-  grid-column-start: profilePic;
+  margin: 1px;
+
 }
 
 .dotdotdotTwo {
   margin: 15px;
+  padding-right: 10px;
   grid-column-start: col3;
   justify-self: end;
 }
@@ -264,23 +381,23 @@ align-self: flex-end;
 .picBottomTwo {
   background-color: white;
 display: grid;
-grid-template-columns: [like] 10% [comment] 10% [send] 10% [bookmark] 50%;
+grid-template-columns: [like] 10% [comment] 10% [send] 10% [bookmark] 1fr;
 height: 40px;
 width: 100%;
-border: 1px solid green;
+
 
 }
 
 #likeIconTwo {
   grid-column-start: like;
-  height: 100%;
+  height: 70%;
 
 }
 
  #commentIconTwo {
 
   grid-column-start: comment;
-  height: 100%;
+  height: 70%;
 
 
 }
@@ -288,25 +405,29 @@ border: 1px solid green;
 #sendIconTwo {
 
   grid-column-start: send;
-  height: 100%;
+  height: 70%;
 
 }
 
 #bookmarkIconTwo {
   justify-self: end;
-
+padding-right: 20px;
   grid-column-start: bookmark;
-  height: 100%;
+  height: 70%;
 
 }
+
 
 .likesCommentsTwo {
   display: grid;
   grid-template-rows: [row1] 10% [row2] 10% [row3] 10% [row4] 1fr;
   grid-template-columns: [col1] 1fr;
+  background-color: white;
+
 }
 
 .likesTwo {
+  margin-top: 5px;
   grid-row-start: row1;
   height: 100%;
 }
@@ -318,7 +439,7 @@ border: 1px solid green;
 
 .timeTwo {
   grid-row-start: row3;
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: bold;
 }
 
@@ -327,12 +448,14 @@ border: 1px solid green;
   flex-direction: row;
   grid-row-start: row4;
   height: 100%;
+  justify-content: space-between;
 
 }
 
 .buttonTwo {
   grid-column-start: col1;
-
+  color: #3897f0;
+  font-weight: 600;
   align-self: end;
   margin: 10px;
 
@@ -346,47 +469,63 @@ border: 1px solid green;
 
 
 .sideBar{
+  column-gap: 1.0em;
   display: grid;
-  grid-template-rows: [row1] 10% [row2] 20% [row3] 20%;
+  grid-template-rows: [row1] 3% [row2] 12% [row3] 12% [row4] 4%;
   grid-column-start: sideBar;
   background-color: #fafafa;
-  border: 1px solid black;
+
+  grid-row-gap: 10px;
 }
 
 
 .profileBar {
 
-
+background-color: #fafafa;
 display: grid;
 grid-row-start: row1;
 
 grid-template-columns: [col1] 25% [col2] 1fr;
 height: 100%;
-border: 1px solid red;
+
 }
 
 
 
 .profileSidePic {
-  border: 1px solid red;
+
   height: 100%;
   grid-column-start: col1;
 
 
 }
 .profileSidePic img {
+  margin: 10px;
+  transform: rotate(90deg);
   border-radius: 50%;
 }
-.stories {
 
-  grid-row-start: row2;
+.userName {
+  grid-column-start: col2;
 
-  height: 100%;
-  border: 1px solid green;
-
-
+  justify-self: start;
 
 }
+
+.stories {
+  grid-row-start: row2;
+  height: 200px;
+  border: 1px solid #dbdbdb;
+  /* border: 1px solid green; */
+}
+
+.stories-box {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .storyBar {
   display: flex;
@@ -394,8 +533,9 @@ border: 1px solid red;
 justify-content: space-between;
 
  width: 100%;
- height: 20%;
- border: 1px solid yellow;
+ height: 10%;
+ padding-bottom: 5%;
+ /* border: 1px solid yellow; */
 }
 .storyLabels {
   margin: 8px;
@@ -406,27 +546,67 @@ justify-content: space-between;
 }
 
 .actualStories {
-  overflow-y: scroll;
+  grid-row-end: row3;
+  /* display: flex;
+  flex-direction: column; */
+  height: 100%;
+  width: 100%;
+  /* justify-content: flex-start; */
+  overflow: scroll;
+}
+
+.storyContent {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 50px;
+  width: 100%;
+
+}
+
+.profileStory img {
+  margin-left: 20px;
+  border-radius: 50%;
+  border: 2px solid pink;
+
+}
+
+.storyTag {
+  font-size: 0.7em;
+  display: block;
+  padding-left: 5%;
+
+
+
 }
 
 .suggestions {
+
   grid-row-start: row3;
-  height: 100%;
-  border: 1px solid red;
+  /* height: 200px; */
+  /* border: 1px solid red; */
+}
+
+.suggestions-box {
+  border: 1px solid #dbdbdb;
+  padding-top: 10px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .suggestionsBar {
   display: flex;
   flex-direction: row;
-justify-content: space-between;
+  justify-content: space-between;
 
- width: 100%;
- height: 20%;
- border: 1px solid yellow;
-}
-.suggestionsContent {
-  overflow-y: scroll;
-}
+  width: 100%;
+  height: 20%;
+  /* border: 1px solid yellow; */
+  }
+
 .suggestionLabels {
   margin: 8px;
 }
@@ -435,9 +615,131 @@ justify-content: space-between;
   margin: 8px;
 }
 
-.userName {
-  grid-column-start: col2;
-  padding: 5px;
-  justify-self: start;
-  padding: 10px;
+.suggestionsContent {
+  width: 100%;
+  height: 200px;
+  overflow: scroll;
+  /* display: flex;
+  flex-direction: column; */
+  /* overflow: hidden; */
+
+  /* justify-content: flex-start; */
+}
+
+.actualSuggestions {
+  font-size: 0.7em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 50px;
+  width: 100%;
+
+
+}
+
+.profileSuggestions {
+  padding-left: 10%;
+  margin-left: 15px;
+  padding-right: 20%;
+}
+
+.profileSuggestion img {
+  margin-left: 20px;
+  border-radius: 50%;
+  border: 2px solid pink;
+
+}
+
+a {
+      text-decoration:none;
+   }
+
+a:visited {
+  color: #3897f0;
+}
+
+.suggestionTag {
+  display: block;
+  padding-left: 15%;
+  padding-right: 10%;
+
+
+}
+
+.followTag {
+  padding-top: 3%;
+  font-size: 1.2em;
+  color: #3897f0;
+}
+
+
+.footerLinks {
+   display:inline;
+
+  grid-row-start: row4;
+}
+
+.link1 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link2 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link3 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link4 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link5 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link6 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link7 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link8 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link9 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link10 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+.link11 {
+  font-size: 0.8em;
+   color: #c7c7c7;
+}
+
+@media (min-width: 400px) and (max-width:800px) {
+  .sideBar {
+    display: none;
+  }
+  .postPage {
+    margin-left: auto;
+    margin-right: 50%;
+  }
 }
